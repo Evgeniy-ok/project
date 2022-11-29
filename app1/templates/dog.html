@@ -3,7 +3,7 @@
 {% block content %}
     
         
-            <div class="border border-3 border-info w-55 m-2 p-3 rounded">
+            <div class="border border-3 border-info w-50 m-2 p-3 rounded">
                 
                 <h3 style="color: black;" class="fs-1">{{dog.name}}</h3>
                 <p style="color: rgb(196, 14, 14);" class="fs-5">{{dog.breed}}</p>
@@ -15,7 +15,7 @@
                 <a class="btn btn-secondary" href="/editpost/{{dog.id}}">
                     Редактировать
                 </a>
-                <a class="btn btn-secondary" href="">
+                <a class="btn btn-secondary" href="/deletepost/{{dog.id}}">
                     Удалить
                 </a>       
                 

@@ -27,4 +27,11 @@ urlpatterns = [
     path('dog/<int:id>', views.dog),
     path('editpost/<int:id>', views.editpost),
     path('saveeditpost/<int:id>', views.saveeditpost),
+    path('deletepost/<int:id>', views.deletepost),
+    path('export', views.export),
+    path('download', views.download),
+    path('registration', views.registration),
+    path('login', views.login_user),
+    path('logout', views.logout_user),
+
 ]
