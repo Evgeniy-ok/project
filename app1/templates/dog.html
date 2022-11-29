@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    
+        
+            <div class="border border-3 border-info w-55 m-2 p-3 rounded">
+                
+                <h3 style="color: black;" class="fs-1">{{dog.name}}</h3>
+                <p style="color: rgb(196, 14, 14);" class="fs-5">{{dog.breed}}</p>
+                <img style="width: 40vw;  " src="/static/images/{{dog.image}}" alt=""/>
+                <p style="color: black;" class="fs-5">{{dog.age}}</p>
+                
+            </div>
+            <div class="m-2">
+                <a class="btn btn-secondary" href="/editpost/{{dog.id}}">
+                    Редактировать
+                </a>
+                <a class="btn btn-secondary" href="">
+                    Удалить
+                </a>       
+                
+            </div>
+    
+{% endblock %}
+ 

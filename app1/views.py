@@ -38,3 +38,36 @@ def newguest(request):
     guest.image = file.name
     guest.save()
     return HttpResponseRedirect('/guests')
+
+# О собаке
+def dog(request, id):
+    dog = Posts.objects.get(id=id)
+    return render(request, 'dog.html', {'dog': dog})
+
+# Редактировать пост
+def editpost(request, id):
+    editpost = Posts.objects.get(id=id)
+    return render(request, 'editpost.html', {'dog': dog})
+
+# Сохранить пост
+def saveeditpost(request, id):
+    dog = Posts.objects.get(id=id)
+    name = request.POST.get('name')
+    breed = request.POST.get('breed')
+    age = request.POST.get('age')
+    if 'file' in request.FILES:
+        file = request.FILES['file']
+        fss = FileSystemStorage('app1/static/images/')
+        saved_file = fss.save(file.name, file)
+        dog.image = file.name
+    
+    dog.name = name
+    dog.breed = breed
+    dog.age = age
+    
+
+    dog.save()
+    return HttpResponseRedirect('/guests')
+
+
+

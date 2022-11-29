@@ -24,4 +24,7 @@ urlpatterns = [
     path('guests', views.guests),
     path('likbez', views.likbez),
     path('newguest', views.newguest),
+    path('dog/<int:id>', views.dog),
+    path('editpost/<int:id>', views.editpost),
+    path('saveeditpost/<int:id>', views.saveeditpost),
 ]

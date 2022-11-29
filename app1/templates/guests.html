@@ -3,16 +3,18 @@
 {% block content %}
     
         <div>
-            <a href="/">
+            <a style="color: black;" href="/">
                 Главная
             </a>
         </div> 
         {% for dog in guests %}
             <div class="border border-3 border-info w-25 m-2 p-3 rounded">
-                <h3 class="fs-1">{{dog.name}}</h3>
-                <p class="fs-5">{{dog.breed}}</p>
-                <img style="width: 10vw; " src="/static/images/{{post.image}}" alt=""/>
-                <p class="fs-5">{{dog.age}}</p>
+                <a style="text-decoration: none;" href="dog/{{dog.id}}">
+                <h3 style="color: black;" class="fs-1">{{dog.name}}</h3>
+                <p style="color: rgb(196, 14, 14);" class="fs-5">{{dog.breed}}</p>
+                <img style="width: 10vw;  " src="/static/images/{{dog.image}}" alt=""/>
+                <p style="color: black;" class="fs-5">{{dog.age}}</p>
+                </a>
             </div>
         {% endfor %}
 
