@@ -1,0 +1,20 @@
+.img-home {
+    width: 70vw;
+}
+
+.title-home{
+    color: blue;
+    margin: 20px;
+}
+.img-inf {
+    width: 50vw;
+}
+
+.title-inf{
+    color: rgb(47, 83, 6);
+    margin: 20px;
+}
+
+.guests-title{
+    color: brown;
+}

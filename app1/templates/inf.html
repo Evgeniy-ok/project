@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <body>
+        <a href="/">
+            Главная
+        </a>
+        <div class="title-home">
+            Здравствуйте, на этом сайте вы можете получить информацию о содержании вашего любимца,
+            делиться фото с описанием вашего друга 
+        </div>  
+        <div>
+            <img class="img-home" src="{% static '22.jpg' %}" />
+        </div>     
+    </body>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    
+        <div>
+            <a href="/">
+                Главная
+            </a>
+        </div> 
+        {% for dog in guests %}
+            <div class="border border-3 border-info w-25 m-2 p-3 rounded">
+                <h3 class="fs-1">{{dog.name}}</h3>
+                <p class="fs-5">{{dog.breed}}</p>
+                <img style="width: 10vw; " src="/static/images/{{post.image}}" alt=""/>
+                <p class="fs-5">{{dog.age}}</p>
+            </div>
+        {% endfor %}
+
+        <div>
+            <form action="newguest" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <input type="text" placeholder="Кличка" name="name"/>
+                <input type="text" placeholder="Порода" name="breed"/>
+                <input type="int" placeholder="Возраст" name="age"/>
+                <input type="file" name="file"/>
+                <input type="submit" value="Создать"/>
+            </form>
+        </div>
+{% endblock %}
+ 

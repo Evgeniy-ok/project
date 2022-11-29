@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+        
+        <a href="/inf">
+            Информация о сайте
+        </a>
+        <div>
+            <a href="/likbez">
+                Ликбез
+            </a>
+        </div>
+        <div>
+            <a href="/guests">
+                Карточки гостей
+            </a>
+        </div>
+        <div class="title-home">
+            Добро пожаловать
+        </div>
+        <div>
+            <img class="img-home" src="{% static '11.jpg' %}" />
+        </div>    
+{% endblock %}
